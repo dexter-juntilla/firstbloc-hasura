@@ -1,0 +1,37 @@
+table:
+  schema: public
+  name: users
+object_relationships:
+  - name: conversation_list
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: conversation_list
+        insertion_order: null
+        column_mapping:
+          id: user_id
+array_relationships:
+  - name: contacts
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: users
+        insertion_order: null
+        column_mapping:
+          id: id
+  - name: conversation_lists
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          schema: public
+          name: conversation_list
+  - name: messages
+    using:
+      foreign_key_constraint_on:
+        column: sender_id
+        table:
+          schema: public
+          name: messages

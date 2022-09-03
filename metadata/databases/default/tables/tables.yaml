@@ -1,0 +1,7 @@
+- "!include public_adonis_schema.yaml"
+- "!include public_adonis_schema_versions.yaml"
+- "!include public_conversation_list.yaml"
+- "!include public_conversations.yaml"
+- "!include public_messages.yaml"
+- "!include public_tokens.yaml"
+- "!include public_users.yaml"

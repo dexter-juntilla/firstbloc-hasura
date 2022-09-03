@@ -1,0 +1,15 @@
+table:
+  schema: public
+  name: conversations
+object_relationships:
+  - name: conversation_list
+    using:
+      foreign_key_constraint_on: conversation_list_id
+array_relationships:
+  - name: messages
+    using:
+      foreign_key_constraint_on:
+        column: conversation_id
+        table:
+          schema: public
+          name: messages

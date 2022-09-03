@@ -1,0 +1,1 @@
+CREATE TABLE "public"."conversation_list" ("id" bigserial NOT NULL, "user_id" int8 NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON UPDATE no action ON DELETE no action);COMMENT ON TABLE "public"."conversation_list" IS E'holds the relationship between user and his/her conversations';

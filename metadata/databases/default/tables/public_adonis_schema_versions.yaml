@@ -1,0 +1,3 @@
+table:
+  schema: public
+  name: adonis_schema_versions
